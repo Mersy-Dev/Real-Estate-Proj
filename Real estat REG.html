@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Real estat REG.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/42f47e44b7.js" crossorigin="anonymous" x></script>
+    <title>REGISTRATION</title>
+</head>
+<body>
+  <div class="bod">
+    <!-- <div class="spac"></div> -->
+    <h1>REGISTRATION/SIGN-UP <br> FORM</h1>
+    <form class="frm">
+      <label for="User Type" class="block mb-2 text-sm font-medium text-white-900 white:text-white">Select User type</label>
+      <select id="usertype" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option value="Select User">Select User type</option>
+          <option value="Buyer">Buyer</option>
+          <option value="Seller">Seller</option>
+          <option value="Agent">Agent</option>
+          <option value="Agency">Agency</option>
+      </select>
+
+      <div id="empt_frm">
+          <div class="mb-6">
+              <label for="First Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">First Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="First Name" required>
+            </div>
+            <div class="mb-6">
+              <label for="Last Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Last Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Last Name" required>
+            </div>
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Your email</label>
+            <input type="email" id="empemail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Your password</label>
+            <input type="password" id="emppassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+          </div>
+          <div class="mb-6">
+            <label for="repeat-password" class="block mb-2 text-sm font-medium text-white-900 white :text-white">Repeat password</label>
+            <input type="password" id="repeat-password" class="shadow-sm bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+          </div>
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input  type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+            </div>
+            <label for="terms" class="ml-2 text-sm font-medium text-white-900 dark:text-white-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+          </div>
+          <button onclick="signOut(event)" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </div>
+
+       <!-- DEFAULT FORM -->
+       
+       <div id="deflt_frm">
+          <h1 id="buy_h1">Buyer/User Account</h1>
+          <h5 id="buy_h5">This individual account enables you to search for properties, save properties for later viewing, get alert for saved searches and gives you direct contact to the sellers.</h5>
+          <div id="comp_name">
+            <div class="mb-6">
+              <label for="Company Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Company Name</label>
+              <input type="text" id="comname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Company Name" required>
+            </div>  
+          </div>
+          <div class="mb-6">
+            <label for="First Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">First Name</label>
+            <input type="text" id="fname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="First Name" required>
+          </div>
+          <div class="mb-6">
+            <label for="Last Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Last Name</label>
+            <input type="text" id="lname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Last Name" required>
+          </div>
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Your email</label>
+          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+        </div>
+
+        <div id="off_name">
+          <div class="mb-6">
+            <label for="Office Name" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Office Name</label>
+            <input type="text" id="offname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Office Name" required>
+          </div> 
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Your password</label>
+            <div class="pass-dis">
+              <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+              <div id="toggle-button">
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+            </div>
+        </div>
+        <div class="mb-6">
+          <label for="repeat-password" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">Repeat password</label>
+          <div class="pass-dis">
+            <input type="password" id="cpassword" class="shadow-sm bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+            <div id="toggle-button2">
+              <i class="fa-solid fa-eye-slash"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+          </div>
+          <label for="terms" class="ml-2 text-sm font-medium text-white-900 white:text-white-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+        </div>
+        <button id="sub" onclick="signUp(event)" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >Register new account</button>
+    </div>
+      
+
+      <!-- BUYER FORMS -->
+
+      <div id="buy_frm">
+          <h1 id="buy_h1">Buyer/User Account</h1>
+          <h5 id="buy_h5">This individual account enables you to search for properties, save properties for later viewing, get alert for saved searches and gives you direct contact to the sellers.</h5>
+
+
+          <div class="mb-6">
+              <label for="Username" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">First Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Buyer First Name" required>
+          </div>
+
+          <div class="mb-6">
+              <label for="Username" class="block mb-2 text-sm font-medium text-white-900 white:text-white">Last Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Buyer Last Name" required>
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <input type="email" id="byemail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+          </div>
+
+          <div class="mb-6">
+              <label for="Mobile 1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+              <input type="number" id="bynumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Mobile Number" required>
+            </div>
+          <div class="mb-6">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+            <input type="password" id="bypassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder=" Password" required>
+          </div>
+          <div class="mb-6">
+            <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+            <input type="password" id="bycpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder=" Confirm Password" required>
+          </div>
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input  type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+            </div>
+            <label for="" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+          </div>
+          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </div>
+
+      <!-- SELLER FORMS -->
+
+      <div id="seller_frm">
+          <h1 id="seller_h1">Seller's Account</h1>
+          <h5 id="seller_h5">This individual account allows properties' owners list their properties themselves and gives them full control over how to market and get their buyers.</h5>
+
+
+          <div class="mb-6">
+              <label for="Username" class="block mb-2 text-sm font-medium text-white-900 dark:text-white">First Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-white text-white-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Seller First Name" required>
+          </div>
+
+          <div class="mb-6">
+              <label for="Username" class="block mb-2 text-sm font-medium text-white  text-white-900 white:text-white">Last Name</label>
+              <input type="text" id="name" class="shadow-sm bg-gray-50 border border-white-300 text-white-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Seller Last Name" required>
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <input type="email" id="selemail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+          </div>
+
+          <div class="mb-6">
+              <label for="Mobile 1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+              <input type="number" id="senumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Mobile Number" required>
+            </div>
+          <div class="mb-6">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+            <input type="password" id="sepassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Password" required>
+          </div>
+          <div class="mb-6">
+            <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+            <input type="password" id="secpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder=" Confirm Password" required>
+          </div>
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+            </div>
+            <label for="" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+          </div>
+          <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </div>
+
+      <!-- AGENT FORM -->
+
+      <div id="agent_frm">
+        <h1 id="agent_h1">Agent's Account</h1>
+        <h5 id="agent_h5">This is an individual Agent's account for professionals in real estate. This account enables an agent to list properties under his/her mandate either as an independent marketer or as an agent under a named agency..</h5>
+
+
+        <div class="mb-6">
+            <label for="Username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+            <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Agent's First Name" required>
+        </div>
+
+        <div class="mb-6">
+            <label for="Username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+            <input type="text" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Agent's Last Name" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+          <input type="email" id="agemail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+        </div>
+
+        <div class="mb-6">
+            <label for="Mobile 1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+            <input type="number" id="agnumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Mobile Number" required>
+          </div>
+
+          <div class="mb-6">
+            <label for="Office Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Office Name</label>
+            <input type="text" id="agoffname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Office Name" required>
+          </div> 
+
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+          <input type="password" id="agpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Password" required>
+        </div>
+        <div class="mb-6">
+          <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+          <input type="password" id="agcpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder=" Confirm Password" required>
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input  type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+          </div>
+          <label for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+        </div>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </div>
+
+      <!-- AGENCY FORM -->
+
+      <div id="agency_frm">
+        <h1 id="agency_h1">Agency Account</h1>
+        <h5 id="agency_h5">This account is for real estate company that list properties on behalf of clients/sellers. Agents are registered under agency, giving the agency control of the various agents and agents' listing. The agency has the mandate of all properties under the agency.</h5>
+
+
+        <div class="mb-6">
+            <label for="Company Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
+            <input type="text" id="agcomname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Company Name" required>
+        </div>
+        
+        <div class="mb-6">
+          <label for="First Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
+          <input type="text" id="agfname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Owner/Broker First Name" required>
+      </div>
+        <div class="mb-6">
+            <label for="Last Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
+            <input type="text" id="aglname" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Owner/Broker Last Name" required>
+        </div>
+
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+          <input type="email" id="aggemail" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email Address" required>
+        </div>
+
+        <div class="mb-6">
+            <label for="Mobile 1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number</label>
+            <input type="number" id="aggnumber" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Mobile Number" required>
+          </div>
+
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+          <input type="password" id="aggpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Password" required>
+        </div>
+        <div class="mb-6">
+          <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+          <input type="password" id="aggcpassword" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder=" Confirm Password" required>
+        </div>
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+          </div>
+          <label for="" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+        </div>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+      </div>
+  </form>
+  </div>
+
+    
+    
+  
+    
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<script>
+    buy_frm.style.display = "none"
+    seller_frm.style.display = "none"
+    agent_frm.style.display = "none"
+    agency_frm.style.display = "none"
+    deflt_frm.style.display = "none"
+
+
+    var selectt= document.getElementById("usertype");
+    // let buy = document.getElementById('buy')
+    // let seller_frm = document.getElementById('seller_frm');
+    // let buy_frm = document.getElementById('buy_frm');
+
+
+selectt.addEventListener("change", function(){
+    console.log(selectt.value);
+  if (selectt.value == "Buyer") {
+    buy_frm.style.display = "none"
+    seller_frm.style.display = "none"
+    empt_frm.style.display = "none"
+    agent_frm.style.display = "none"
+    agency_frm.style.display = "none"
+    deflt_frm.style.display = "block"
+    comp_name.style.display = "none"
+    off_name.style.display = "none"
+    document.getElementById("buy_h1").innerHTML = "Buyer/User Account";
+    
+
+    
+
+
+  } else if (selectt.value == "Seller") {
+      seller_frm.style.display = "none"
+      empt_frm.style.display = "none"
+      buy_frm.style.display = "none"
+      agent_frm.style.display = "none"
+      agency_frm.style.display = "none"
+      deflt_frm.style.display = "block"
+      comp_name.style.display = "none"
+      off_name.style.display = "none"
+      document.getElementById("buy_h1").innerHTML = "Seller's Account";
+      document.getElementById("buy_h5").innerHTML = "This individual account allows properties' owners list their properties themselves and gives them full control over how to market and get their buyers.";
+
+
+
+    
+
+
+
+  } else if (selectt.value == "Agent") {
+      seller_frm.style.display = "none"
+      empt_frm.style.display = "none"
+      buy_frm.style.display = "none"
+      agent_frm.style.display = "none"
+      agency_frm.style.display = "none"
+      deflt_frm.style.display = "block"
+      comp_name.style.display = "block"
+      off_name.style.display = "none"
+      document.getElementById("buy_h1").innerHTML = "Agent's Account";
+      document.getElementById("buy_h5").innerHTML = "This is an individual Agent's account for professionals in real estate. This account enables an agent to list properties under his/her mandate either as an independent marketer or as an agent under a named agency...";
+
+
+
+      
+
+  }
+  else if (selectt.value == "Agency") {
+      seller_frm.style.display = "none"
+      empt_frm.style.display = "none"
+      buy_frm.style.display = "none"
+      agent_frm.style.display = "none"
+      agency_frm.style.display = "none"
+      deflt_frm.style.display = "block"
+      comp_name.style.display = "none"
+      off_name.style.display = "block"
+      document.getElementById("buy_h1").innerHTML = "Agency Account";
+      document.getElementById("buy_h5").innerHTML = "This account is for real estate company that list properties on behalf of clients/sellers. Agents are registered under agency, giving the agency control of the various agents and agents' listing. The agency has the mandate of all properties under the agency.";
+
+  }
+  else if (selectt.value == "Select User") {
+      seller_frm.style.display = "none"
+      empt_frm.style.display = "block"
+      buy_frm.style.display = "none"
+      agent_frm.style.display = "none"
+      agency_frm.style.display = "none"
+      alert("Select type of User");
+
+  } 
+});
+
+
+// FORM SIGNUP
+const termsCond = document.getElementById('terms')
+const signUpp = document.getElementById('sub')
+var checkbox = document.getElementById('remember')
+
+ function signUp(event){
+        event.preventDefault()
+        let user = {
+          comname: comname.value,
+          fname: fname.value,
+          lname: lname.value,
+          offname: offname.value,
+          email: email.value,
+          password: password.value,
+          cpassword: cpassword.value,
+        }
+
+        console.log(user);
+        if(user.password != user.cpassword){
+            alert("Password does not match");
+            return;
+        }else if(user.email == "" || user.fname == "" || user.lname == ""  ){
+            alert("input field cannot be empty")
+            return
+        }else if (checkbox.checked) {
+          alert("Signup Successful")
+          localStorage.setItem('loggedUser', JSON.stringify(user))
+          window.location.href = 'Real estat login.html'
+
+        } else {
+          alert("agree to terms and condition")
+        } 
+      };
+
+      function signOut() {
+          event.preventDefault()
+          if (signOut) {
+            alert("select a type of User")
+          }
+          
+          
+        }
+
+        const passwordField = document.getElementById('password');
+        const toggleButton = document.getElementById('toggle-button');
+        
+        
+
+
+        toggleButton.addEventListener('click', function() {
+          if (passwordField.type === 'password') {
+          passwordField.type = 'text';
+          toggleButton.innerHTML = '<i class="fa-solid fa-eye"></i>';
+            } else {
+          passwordField.type = 'password';
+          toggleButton.innerHTML = ' <i class="fa-solid fa-eye-slash"></i>';
+          }
+          });
+
+          const toggleButton2 = document.getElementById('toggle-button2');
+          const cpasswordField = document.getElementById('cpassword');
+
+          toggleButton2.addEventListener('click', function() {
+          if (cpasswordField.type === 'password') {
+          cpasswordField.type = 'text';
+          toggleButton2.innerHTML = '<i class="fa-solid fa-eye"></i>';
+            } else {
+          cpasswordField.type = 'password';
+          toggleButton2.innerHTML = ' <i class="fa-solid fa-eye-slash"></i>';
+          }
+          });
+      // if (termsCond.addEventListener("clicked", function(signUp){
+      //     signUpp.disabled = !termsCond.checked;
+      //   } 
+
+
+
+
+
+
+
+
+
+</script>

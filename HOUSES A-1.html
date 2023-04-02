@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="houses.css" />    
+    <script
+      src="https://kit.fontawesome.com/42f47e44b7.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>HOUSE LIST</title>
+  </head>
+  <style>
+    
+    * {
+      padding: 0px;
+      margin: 0px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .title {
+      color: blue;
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    body {
+      background-image: url("Backgrn.jpg");
+    }
+    .bdy1 {
+      background-color: rgb(238, 238, 238);
+    }
+
+    .n1-cont {
+      width: 1345px;
+      height: 45px;
+      background-color: black;
+      display: flex;
+    }
+
+    .n1 {
+      width: 130px;
+      height: 38px;
+      border: 1px solid silver;
+      margin-left: 110px;
+    }
+    .n2 {
+      width: 130px;
+      height: 38px;
+      border: 1px solid silver;
+    }
+    .n3 {
+      width: 360px;
+      height: 38px;
+      border: 1px solid silver;
+    }
+    .n4 {
+      width: 70px;
+      height: 38px;
+      border: 1px solid silver;
+    }
+    .n2-cont {
+      width: 1350px;
+      height: 70px;
+      background-color: white;
+      /* border: 1px solid red; */
+      display: flex;
+    }
+    .n2-div {
+      width: 175px;
+      height: 60px;
+      background-color: white;
+      /* border: 1px solid blue; */
+      margin: 5px 20px;
+    }
+
+    .n2-btn1 {
+      width: 85px;
+      height: 60px;
+      border: hidden;
+      margin-left: 450px;
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 15px;
+      background: none;
+      position: relative;
+    }
+
+    .n2-btn1:hover .buy-drp {
+      visibility: visible;
+    }
+    .n2-btn1:hover {
+      color: brown;
+      /* border-bottom: 3px solid brown; */
+    }
+    .n2-btnn:hover {
+      color: brown;
+      /* border-bottom: 2px solid brown; */
+    }
+    .n2-btn:hover {
+      color: brown;
+      /* border-bottom: 2px solid brown; */
+    }
+    .n2-btn:hover .sell-drp {
+      visibility: visible;
+    }
+    .n2-btn:hover .rent-drp {
+      visibility: visible;
+    }
+    .n2-btnn:hover .find-drp {
+      visibility: visible;
+    }
+    .n2-btnn:hover .news-drp {
+      visibility: visible;
+    }
+
+    .n2-btnn:hover .contact-drp {
+      visibility: visible;
+    }
+    .buy-drp {
+      width: 1348px;
+      height: 450px;
+      position: absolute;
+      left: -665px;
+      top: 65px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+
+    .buy {
+      width: 450px;
+      height: 400px;
+      border: 1px solid blue;
+      margin: 5px 10px;
+      text-align: start;
+    }
+    .hrr {
+      width: 380px;
+      height: 1px;
+      color: darkgrey;
+      margin-top: -8px;
+    }
+    .buy h3 {
+      color: black;
+      font-size: 20px;
+      font-weight: 550;
+      margin-bottom: 20px;
+    }
+    .buy h5 {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 0.5;
+    }
+
+    .buy-img {
+      width: 320px;
+      height: 180px;
+    }
+    .sell h3 {
+      color: black;
+      font-size: 20px;
+      font-weight: 550;
+      margin-bottom: 20px;
+      text-align: start;
+    }
+    .sell h5 {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 0.5;
+      text-align: start;
+    }
+    .hh5 {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 0.9;
+      text-align: start;
+      margin-top: 5px;
+    }
+    .sell-img {
+      width: 400px;
+      height: 220px;
+      text-align: start;
+      border: 1px solid blue;
+    }
+    .sellimg {
+      width: 100%;
+      height: 220px;
+    }
+    .bim {
+      width: 100%;
+      height: 180px;
+    }
+    h5 a {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 0.5;
+      text-decoration: none;
+    }
+    .sell-drp {
+      width: 1348px;
+      height: 450px;
+      position: absolute;
+      left: -753px;
+      top: 60px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+    .sell {
+      width: 450px;
+      height: 400px;
+      border: 1px solid blue;
+      margin: 5px 10px;
+    }
+
+    .find-drp {
+      width: 1348px;
+      height: 390px;
+      position: absolute;
+      left: -919px;
+      top: 60px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+
+    .rent-drp {
+      width: 1348px;
+      height: 390px;
+      position: absolute;
+      left: -836px;
+      top: 60px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+
+    .rent {
+      width: 330px;
+      height: 340px;
+      margin: 5px 5px;
+      border: 1px solid blueviolet;
+    }
+
+    .rent h3 {
+      color: black;
+      font-size: 20px;
+      font-weight: 550;
+      margin-bottom: 20px;
+      text-align: start;
+    }
+    .rent h5 {
+      color: black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 0.8;
+      /* padding-top: 5px; */
+      /* letter-spacing: 5px; */
+      text-align: start;
+    }
+    .news-drp {
+      width: 1348px;
+      height: 320px;
+      position: absolute;
+      left: -1056px;
+      top: 60px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+
+    .contact-drp {
+      width: 1348px;
+      height: 380px;
+      position: absolute;
+      left: -1192px;
+      top: 60px;
+      z-index: 1;
+      display: flex;
+      visibility: hidden;
+      border: 1px solid lightgray;
+      background-color: white;
+    }
+    .n2-btn {
+      width: 80px;
+      height: 60px;
+      border: none;
+      margin: 5px 2px;
+      font-weight: 700;
+      font-size: 15px;
+      position: relative;
+      background: none;
+    }
+
+    .n2-btnn {
+      width: 135px;
+      height: 60px;
+      border: none;
+      margin: 5px 1px;
+      font-weight: 700;
+      font-size: 15px;
+      position: relative;
+      background: none;
+    }
+    .nav3 {
+      height: 65px;
+      width: 1355px;
+      background-color: black;
+      position: sticky;
+      top: 0;
+      display: flex;
+      z-index: 1;
+    }
+    #housesrc {
+      width: 180px;
+      outline: none;
+      border: none;
+      height: 50px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      margin-left: 10px;
+
+      background-color: lightgrey;
+    }
+
+    .srch-div {
+      display: flex;
+      width: 230px;
+      height: 50px;
+      padding: 7px 1px;
+      /* margin: 5px 1p; */
+    }
+    .srch {
+      width: 60px;
+      height: 50px;
+      background-color: brown;
+    }
+
+    .btn-opt {
+      width: 110px;
+      height: 65px;
+      border: none;
+      background: none;
+      color: white;
+      position: relative;
+      border-right: 1px solid lightgray;
+    }
+
+    .btn-optt {
+      width: 110px;
+      height: 65px;
+      border: none;
+      background: none;
+      color: white;
+      position: relative;
+      border-right: 1px solid lightgray;
+    }
+    .btn-opt .frsl {
+      width: 250px;
+      height: 40px;
+      color: black;
+      border: 1px solid blue;
+    }
+
+    .opt-div {
+      width: 250px;
+      height: 123px;
+      position: absolute;
+      top: 66px;
+      display: none;
+      border: 1px solid red;
+      background-color: white;
+    }
+    .opt-divs {
+      width: 300px;
+      height: 290px;
+      position: absolute;
+      top: 66px;
+      display: none;
+      border: 1px solid red;
+      background-color: white;
+    }
+    .pro-typ h4 {
+      color: black;
+      margin: 11px 10px;
+    }
+
+    .btn-opt:focus .opt-div {
+      display: block;
+    }
+    .btn-optt:focus .opt-divs {
+      display: block;
+    }
+    .btn-opt:focus {
+      background-color: brown;
+      color: white;
+    }
+    .btn-opt:hover {
+      color: brown;
+    }
+    .pro-typ {
+      width: 300px;
+      height: 40px;
+      border: 1px solid blue;
+      display: flex;
+    }
+    #chk {
+      width: 30px;
+      height: 30px;
+      margin: 5px 5px;
+      border: 1px solid brown;
+    }
+
+    .house-div {
+      width: 1355px;
+      height: 10500px;
+      position: relative;
+      background-color: white;
+      margin: 50px 1px;
+    }
+
+    .house-div hr {
+      margin-top: 10px;
+    }
+    .hold {
+      display: flex;
+    }
+    .hold p {
+      margin-top: 20px;
+      font-size: 17px;
+      margin-left: 600px;
+    }
+    .hold-btn {
+      width: 200px;
+      height: 50px;
+      border-radius: 5px;
+      margin: 10px 15px;
+      outline: none;
+      border: 1px solid lightgray;
+    }
+
+    .each-house {
+      width: 970px;
+      height: 600px;
+      border-radius: 7px;
+      margin: 30px 20px;
+      display: flex;
+      border: 1px solid lightgray;
+    }
+
+    .house-img {
+      width: 570px;
+      height: 500px;
+      border: 1px solid blue;
+      /* position: relative; */
+    }
+
+    .info-div {
+      width: 400px;
+      height: 600px;
+      border: 1px solid red;
+      /* position: absolute;
+    top: 335px;
+    left: 590px; */
+    }
+
+    .info-div h3 {
+      font-size: 21px;
+      font-weight: 700px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 50px;
+      padding: 10px 15px;
+    }
+
+    .hus-pri{
+      font-size: 25px;
+      font-weight: 700px;
+      padding: 10px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .info-div h4 {
+      font-size: 19px;
+      font-weight: 100;
+      padding: 10px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .lyk{
+      width: 100px;
+      height: 50px;
+      background-color: brown;
+      border: none;
+      color: white;
+      font-size: 19px;
+      font-weight: 400;
+      margin-top: 10px;
+      cursor: pointer;
+
+    }
+    
+    .pri{
+      color: red;
+    }
+    .desc{
+      width: 200px;
+      height: 50px;
+      background-color: brown;
+      border: none;
+      color: white;
+      font-size: 19px;
+      font-weight: 400;
+      margin-left: 20px;
+      margin-top: 100px;
+      cursor: pointer;
+    }
+
+    .info-div h5 {
+      font-size: 16px;
+      font-weight: 100;
+      padding: 10px 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .agent-btn {
+      margin-top: 200px;
+      width: 150px;
+      height: 50px;
+      background-color: brown;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin-left: 150px;
+    }
+
+    .house-img img {
+      width: 100%;
+      height: 100%;
+    }
+    .under-div {
+      width: 550px;
+      height: 70px;
+      display: flex;
+      padding: 10px 10px;
+      justify-content: space-between;
+      border: 1px solid green;
+    }
+
+    .under {
+      width: 170px;
+      height: 40px;
+      color: brown;
+      background: none;
+      font-size: 17px;
+      border: 1px solid lightgrey;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+      cursor: pointer;
+    }
+    .underr {
+      width: 170px;
+      height: 40px;
+      color: brown;
+      background: none;
+      font-size: 17px;
+      border: none;
+    }
+
+    .ctrl {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      bottom: 50;
+      left: 1250px;
+      cursor: pointer;
+      text-align: end;
+      border-radius: 100%;
+      background-color: lightgray;
+      border: 1px solid lightgray;
+    }
+
+    .ctrl:focus-within .upp {
+      display: block;
+    }
+
+    .upp {
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      border: lpx solid brown;
+      background-color: brown;
+      bottom: 10500px;
+      display: none;
+    }
+
+    .hus1-div {
+      width: 1160px;
+      height: 3000px;
+      margin: 40px 100px;
+      background-color: white;
+      border: 1px solid lightgrey;
+      box-shadow: 5px 5px 10px lightgray;
+    }
+
+    .agent-hlder {
+      width: 1100px;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 30px;
+      /* border: 1px solid blue; */
+    }
+
+    .agent-div {
+      width: 550px;
+      height: 70px;
+      margin: 0px 10px;
+      display: flex;
+      /* border: 1px solid red; */
+    }
+    .agent-div img{
+      width: 110px;
+      height: 50px;
+      margin: 10px;
+      border: 1px solid lightgrey;
+    } 
+    .agn-name{
+      width: 400px;
+      height: 50px;
+      padding: 10px 5px;
+    }
+
+    .agn-name h4{
+      margin-top: 6px;
+    }
+
+    .agn-name a{
+      color: brown;
+      cursor: pointer;
+      
+    }
+
+    .dflx {
+      width: 1100px;
+      height: 3000px;
+      display: flex;
+      justify-content: space-around;
+      margin: 0px 30px;
+      /* border: 1px solid black; */
+    }
+
+    .big {
+      width: 750px;
+      height: 3000px;
+      /* border: 1px solid blueviolet; */
+    }
+
+    .smal {
+      width: 300px;
+      height: 3000px;
+      /* border: 1px solid blueviolet; */
+    }
+
+    .big-img {
+      width: 750px;
+      height: 400px;
+      border: 1px solid red;
+    }
+
+    .big-im {
+      width: 750px;
+      height: 400px;
+    }
+
+    .big-img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .whatsapp {
+      width: 750px;
+      height: 400px;
+      margin: 25px 0px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px lightgrey;
+      border: 1px solid lightgrey;
+    }
+    .prop-detai {
+      width: 750px;
+      height: 450px;
+      margin: 25px 0px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px lightgrey;
+      border: 1px solid lightgrey;
+    }
+
+    .prop-detai p {
+      font-size: 14px;
+      margin: 4px 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .prop-detai hr {
+      width: 720px;
+      color: whitesmoke;
+      margin: 35px 9px;
+    }
+
+    .det {
+      width: 748px;
+      height: 50px;
+      border-top: none;
+      border: 1px solid lightgrey;
+      background-color: whitesmoke;
+    }
+
+    .behind {
+      display: flex;
+      margin-top: 20px;
+    }
+    .behind-cont {
+      width: 140px;
+      height: 130px;
+      margin: 3px 5px;
+      border: 1px solid lightgray;
+    }
+
+    .behind-cont h4 {
+      font-size: 13px;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 5px 20px;
+    }
+
+    .behind-cont h5 {
+      font-size: 15px;
+      font-weight: 100;
+      margin-top: 65px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .payment-div {
+      width: 750px;
+      height: 550px;
+      margin: 25px 0px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px lightgrey;
+      border: 1px solid lightgrey;
+    }
+
+    .payment-option {
+      width: 748px;
+      height: 40px;
+      background-color: rgb(245, 244, 244);
+      border-top: none;
+      border: 1px solid lightgray;
+    }
+
+    .price-div {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .price1 {
+      width: 355px;
+      height: 470px;
+      border: 1px solid red;
+      margin: 1px 5px;
+      padding: 1px 8px;
+    }
+    .price2 {
+      width: 355px;
+      height: 470px;
+      border: 1px solid red;
+      margin: 1px 5px;
+    }
+
+    .money{
+      font-size: 15px;
+      margin: 10px 10px;
+      padding: 10px 10px;
+    }
+
+    .price1 .money{
+      font-size: 17px ;
+      color: blue;
+    }
+
+    .price1 h4 {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 15px 10px;
+    }
+    .psent {
+      display: inline-flex;
+      width: 140px;
+      height: 20px;
+      border: 1px solid lightgray;
+      margin: 2px 5px;
+      padding: 10px 10px;
+    }
+
+    .year {
+      width: 100px;
+      height: 20px;
+      border: 1px solid lightgray;
+      margin: 2px 5px;
+      display: inline-flex;
+      padding: 10px 10px;
+    }
+
+    .peecnt {
+      width: 140px;
+      display: inline-flex;
+      height: 20px;
+      border: 1px solid lightgray;
+      margin-top: 2px;
+      margin-left: 30px;
+      padding: 10px 20px;
+    }
+
+    .cal {
+      width: 70px;
+      height: 20px;
+      background-color: brown;
+      margin: 20px 6px;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .black-div {
+      width: 250px;
+      height: 25px;
+      background-color: black;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      color: white;
+      padding: 20px 40px;
+      font-size: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 8px 10px;
+    }
+
+    .price2 hr {
+      width: 327px;
+
+      border: 1px solid lightgrey;
+      margin: 5px 10px;
+    }
+
+    .pandint {
+      font-size: 14px;
+      margin-left: 15px;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .pandint2 {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 0px;
+      margin-left: -30px;
+    }
+    .decor {
+      width: 330px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: lightgray;
+      display: block;
+      margin: 10px 12px;
+    }
+    .dis {
+      display: flex;
+      width: 330px;
+      margin-top: 10px;
+      justify-content: space-between;
+    }
+
+    .orng {
+      width: 100px;
+      height: 40px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+
+      background-color: rgb(209, 138, 5);
+    }
+
+    .darkdip {
+      width: 240px;
+      height: 40px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      background-color: rgb(139, 138, 138);
+    }
+
+    .agnnt-div {
+      display: flex;
+      width: 740px;
+      justify-content: space-between;
+    }
+    .agnt1 {
+      width: 350px;
+      height: 200px;
+      display: flex;
+
+      border: 1px solid lightgray;
+    }
+
+    .agnt1 img {
+      width: 190px;
+      height: 150px;
+      margin: 10px;
+      border: 1px solid lightgrey;
+    }
+    .agnt-name{
+      width: 400px;
+      height: 50px;
+      padding: 10px 5px;
+    }
+
+    .agnt-name h4{
+      margin-top: 16px;
+    }
+    .agntt-name h4{
+      margin-top: 16px;
+      color: blue;
+    }
+    .agntt-name button{
+      width: 100px;
+      height: 50px;
+      border: none;
+      background-color: brown;
+      color: white;
+      cursor: pointer;
+      margin-top: 40px;
+
+    }
+
+    .money-value{
+      font-size: 20px;
+    }
+    .checkot{
+      width: 150px;
+      height: 50px;
+      margin-top: 10px;
+      border: 1px solid white;
+    }
+    #buying{
+      color: blue;
+      font-size: 17px;
+
+    }
+    .agnt-name h6{
+      margin-top: 26px;
+    }
+    
+    .agnt-name a{
+      color: brown;
+    }
+
+
+    .blak-footer {
+      width: 1355px;
+      height: 120px;
+      background-color: black;
+      display: flex;
+    }
+
+    .blak-footer p {
+      font-size: 23px;
+      color: white;
+      font-weight: 100;
+      margin-top: 45px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 100px;
+    }
+
+    .wit-footer {
+      width: 1320px;
+      height: 500px;
+      background-color: white;
+      display: flex;
+      padding: 20px 20px;
+    }
+
+    .wit1-div {
+      width: 450px;
+      height: 500px;
+    }
+
+    .wit2-div {
+      width: 800px;
+      height: 500px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .emil {
+      width: 600px;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      margin-top: 30px;
+      border-radius: 10px;
+      margin-left: 150px;
+    }
+    .inpp {
+      width: 400px;
+      height: 60px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .emil button {
+      width: 170px;
+      border: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: brown;
+      margin-left: 30px;
+    }
+
+    .emil button:hover {
+      background-color: rgb(77, 75, 75);
+    }
+    .logo-div {
+      width: 400px;
+      height: 100px;
+      margin: 20px 20px;
+    }
+
+    .imgg-lg {
+      width: 100%;
+      height: 100%;
+    }
+    .wit1-div p {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: justify;
+      padding: 1px 15px;
+    }
+
+    .wrtin {
+      width: 150px;
+      height: 230px;
+      margin: 10px 15px;
+    }
+    .wrtin h4 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 100;
+    }
+
+    .wrtin h5 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: lighter;
+      color: brown;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .wrtin hr {
+      width: 50px;
+      height: 4px;
+      color: brown;
+      background-color: brown;
+      border: none;
+      margin: 10px 0px;
+    }
+
+    .statos-div {
+      width: 745px;
+      height: 300px;
+      margin: 20px 2px;
+      border-radius: 4px;
+      border: 1px solid lightgray;
+    }
+    .statos-div h3 {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 30px 30px;
+    }
+    .statos-gry {
+      width: 745px;
+      height: 45px;
+      background-color: lightgray;
+    }
+    .status {
+      width: 685px;
+      height: 45px;
+      background-color: black;
+      margin: 0px 30px;
+      display: flex;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .stato {
+      width: 225px;
+      padding: 10px 50px;
+    }
+    .statu {
+      width: 225px;
+      padding: 10px 50px;
+    }
+
+    .status1 {
+      width: 683px;
+      height: 44px;
+      border: 1px solid lightgrey;
+      border-top: none;
+      margin: 0px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 200;
+      display: flex;
+    }
+
+    .status1 p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 200;
+      margin: 10px 20px;
+    }
+
+    /* .whatsapp button {
+      background-color: brown;
+      width: 200px;
+      height: 30px;
+      border: none;
+      margin: 20px 20px;
+    } */
+
+    .whatsapp h2 {
+      font-size: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 20px;
+      margin-top: 10px;
+      font-weight: 800;
+    }
+
+    .whatsapp h1 {
+      font-size: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    .wats1{
+      font-size: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      margin-left: 20px;
+    }
+    .stattus{
+      background: none ;
+      width: 100px;
+      height: 45px;
+      border: none;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+    }
+    .wats4{
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .whatsapp h4 {
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      margin: 10px 0px;
+    }
+    .statuss{
+      width: 100px;
+      height: 45px;
+      border: none;
+      font-size: 19px;
+      color: white;
+      margin: 20px 10px;
+      background-color: lawngreen;
+    }
+    .whatsapp h3 {
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      /* margin-left: 20px; */
+      display: inline-block;
+    }
+
+    .fav-di {
+      display: flex;
+      margin: 20px 20px;
+    }
+
+    .act {
+      width: 45px;
+      height: 22px;
+      border: none;
+      background-color: rgb(126, 204, 48);
+      color: white;
+      padding: 10px 30px;
+      margin: 1px 5px;
+    }
+
+    .sold {
+      width: 51px;
+      height: 18px;
+      border: none;
+      background-color: rgb(60, 174, 240);
+      color: white;
+      margin: 1px 5px;
+      padding: 13px 30px;
+      font-size: 13px;
+    }
+
+    .btn {
+      background: none;
+      border: none;
+      outline: none;
+      color: grey;
+    }
+    #btnh1 i {
+      font-size: 27px;
+      margin-top: 1px;
+      margin-left: 90px;
+      cursor: pointer;
+    }
+
+  </style>
+
+
+  <body>
+    <div id="bdy_sect">
+        <nav class="n1-cont">
+            <div class="n1"></div>
+            <div class="n2"></div>
+            <div class="n3"></div>
+            <div class="n3"></div>
+            <div class="n4"></div>
+            <div class="n1"></div>
+        </nav>
+
+        <nav class="n2-cont">
+          <div class="n2-div"></div>
+          <button class="n2-btn1">
+              BUY
+              <div class="buy-drp">
+                <div class="buy">
+                    <h3>Buy Top 5 Homes</h3>
+                    <h5><a href="#">off T.Y. Danjuma street, Asokoro, Abuja, Abuja FCT</a> </h5> <br>
+                    <h5><a href="#">Golden Spring Estate, Apo, Abuja, Abuja FCT</a></h5> <br>
+                    <h5><a href="#">Lokogoma, Abuja, Abuja FCT</a></h5> <br>
+                    <h5><a href="#">Apo Mechanics, Abuja., Apo, Abuja, Abuja FCT</a></h5> <br>
+                    <h5><a href="#">Urban hub, Abuja, Abuja FCT</a></h5>
+                </div>
+                <div class="buy">
+                    <h3>Homes for Sale</h3>
+                    <h5><a href="#">All Homes</a></h5> <br>
+                    <h5><a href="#">New Homes & Communities</a></h5> <br>
+                    <h5><a href="#">Foreclosed Properties</a></h5> <br>
+                    <hr class="hrr">
+                    <h3>Projects</h3>
+                    <h5><a href="#">Condominium</a></h5> <br>
+                    <h5><a href="#">Apartments</a></h5><br>
+                    <hr class="hrr">
+                    <h3>Home Values</h3>
+                    <h5><a href="#">Recently Sold</a></h5> <br>
+                    <h5><a href="#">Property Directory</a></h5>
+                    
+
+                    
+                </div>
+                <div class="buy">
+                  <h3>Home Selling Tips</h3>
+                    <h5><a href="#">Home Buying Tips</a></h5> <br>
+                    <h5><a href="#">Read Buying Discussions</a></h5> <br>
+                    <hr class="hrr">
+                  <h3>Top Buy Home</h3>
+                  <div class="buy-img">
+                      <img class="bim" src="buy img.jpg" alt="">
+
+                  </div>
+
+
+
+
+                </div>
+                
+              </div>
+
+          </button>
+          <button class="n2-btn">
+              SELL
+              <div class="sell-drp">
+                    <div class="sell">
+                      <h3>Top Selling Home</h3>
+                      <h5><a href="#">off T.Y. Danjuma street, Asokoro, Abuja, Abuja FCT</a> </h5> <br>
+                      <h5><a href="#">Golden Spring Estate, Apo, Abuja, Abuja FCT</a></h5> <br>
+                      <h5><a href="#">Lokogoma, Abuja, Abuja FCT</a></h5> <br>
+                      <h5><a href="#">Apo Mechanics, Abuja., Apo, Abuja, Abuja FCT</a></h5> <br>
+                      <h5><a href="#">Urban hub, Abuja, Abuja FCT</a></h5>
+                    </div>
+                    <div class="sell">
+                      <h5 class="hh5"><a href="#">Home Buying Tips</a></h5> <br>
+                      <h5><a href="#">Read Buying Discussions</a></h5> <br>
+                      <hr class="hrr">
+                      <h3>Project</h3>
+                      <h5><a href="#">Sell Apartments</a></h5> <br>
+                      <h5><a href="#">Sell Condominiums</a></h5><br>
+                      <hr class="hrr">
+                      <h3>Community</h3>
+                      <h5><a href="#">Discussions on Selling</a></h5> <br>
+                      <h5><a href="#">Ask the Community</a></h5><br>
+                    </div>
+                    <div class="sell">
+                      <h3>Home Selling Tips</h3>
+                      <h5><a href="#">Home Selling Tips</a></h5> <br>
+                      <h5><a href="#"> How to Spark a Bidding War for Your Home</a></h5><br>
+                      <h5><a href="#"> More Home Selling Advice</a></h5><br>
+                      <div class="sell-img">
+                        <img class="sellimg" src="sell img.jpg" alt="">
+                      </div> 
+                    </div>
+              </div>
+          </button>
+          <button class="n2-btn">
+            RENT
+            <div class="rent-drp">
+              <div class="rent">
+                <h3>Short Let</h3>
+                <h5><a href="#">Short Let</a></h5> <br>
+                <h5><a href="#">Pre friendly Short Let </a></h5><br>
+                <h5><a href="#">Homes for Short Let </a></h5><br>
+                <h5><a href="#">In Unit Laundry Short Let</a></h5><br>
+                <hr class="hrr">
+                <h3>Projects</h3>
+                <h5><a href="#"> Rent Condominiums</a></h5><br>
+                <h5><a href="#">Rent Apartments</a></h5><br>
+
+
+              </div>
+              <div class="rent">
+                <h3>Apartments for Rent</h3>
+                <h5><a href="#">Apartments For Rent</a></h5><br>
+                <h5><a href="#">House/Condo Rentals</a></h5><br>
+                <h5><a href="#">All Rentals </a></h5><br>
+                <hr class="hrr">
+                <h3>Common Searches</h3>
+                <h5><a href="#">Pet Friendly Rental</a></h5> <br>
+                <h5><a href="#"> Homes For Rent</a></h5><br>
+                <h5><a href="#"> In-Unit Laundry Rental</a></h5><br>
+                <h5><a href="#"> Studio Apartments</a></h5><br>
+              </div>
+              <div class="rent">
+                <h3>Landlord Tools</h3>
+                <h5><a href="#">More Renting Advice</a></h5> <br>
+                <h5><a href="#">Read Renting Discussions</a></h5><br>
+                <h5><a href="#">Is a Month-to-Month Lease the Flexible<br><br> Dream It Seems? </a></h5><br>
+              </div>
+              <div class="rent"></div>
+
+
+            </div>
+          </button>
+          <button class="n2-btnn">
+            FIND AGENT
+            <div class="find-drp">
+
+            </div>
+          </button>
+          <button class="n2-btnn">
+            NEWS & ADVICES
+            <div class="news-drp">
+
+            </div>
+          </button>
+          <button class="n2-btnn">
+            CONTACT US
+            <div class="contact-drp">
+
+            </div>
+          </button>
+        </nav>
+
+        <nav class="nav3">
+                <div class="srch-div">
+                    <input type="text" name="" id="housesrc">
+                    <div class="srch"></div>
+                </div>
+    
+                <button class="btn-opt">
+                    For Sale
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    Any Price
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    Any Beds
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    Any Baths
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    Any Parking
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-optt">
+                    Property Type
+                    <div class="opt-divs">
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                    </div>
+                </button>
+    
+                <button class="btn-optt">
+                    Construction Status
+                    <div class="opt-divs">
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                        <div class="pro-typ">
+                            <input type="checkbox" name="" id="chk">
+                            <h4>Luxury Homes</h4>
+                        </div>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    Active
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+                <button class="btn-opt">
+                    More Filters
+                    <div class="opt-div">
+                        <option class="frsl" value="">For Sale</option>
+                        <option class="frsl" value="">For Buy</option>
+                        <option class="frsl" value="">Short Let</option>
+                    </div>
+                </button>
+    
+    
+    
+        </nav>
+
+        <div class="house-div">
+          <div class="hold">
+            <p>4055 Properties sorted by</p>
+            <button class="hold-btn">Relevant Listing</button>
+            <button class="hold-btn">Thumbnail View</button>
+          </div>
+          <hr class="hrh">
+
+          
+            <div id="all-house-div"></div>
+
+          
+
+
+
+          
+
+        </div>
+        <div class="blak-footer">
+            <p>SUBSCRIBE OUR NEWSLETTER:</p>
+            <div class="emil">
+                <input class="inpp" type="text" name="" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+                                
+          </div>
+          <div class="wit-footer">
+              <div class="wit1-div">
+                  <div class="logo-div"><img src="naijahouse logo.png" alt="" class="imgg-lg"></div>
+                  <p> NaijaHouses is a leading property listing website in Nigeria with property listings for sale, rent, and short let. We offer Nigerian property seekers a quick and easy way to find properties in Nigeria like houses, lands, shops, office spaces, and other commercial properties.</p>
+                  <br>
+                  <p>NaijaHouses also provides a platform that promotes sales of properties to potential buyers, the ability to manage your properties listings, and tracks clients' leads. It is really easy to get started, you can start enjoying all the services we have prepared for you.</p>
+              </div>
+              <div class="wit2-div">
+                  <div class="wrtin">
+                      <h4>Real Estate</h4>
+                      <hr>
+                      <h5>Sell Property</h5>
+                      <h5>Buy Property</h5>
+                      <h5>Rental Properties</h5>
+                      <h5>Popular Properties</h5>
+                      <h5>Popular Cities</h5>
+      
+      
+                  </div>
+                  <div class="wrtin">
+                      <h4>Property Services</h4>
+                      <hr>
+                      <h5>Find Agent</h5>
+                      <h5>Search Property</h5>
+                      <h5>News</h5>
+                      <h5>Advices</h5>
+                      <h5>Blogs</h5>
+                  </div>
+                  <div class="wrtin">
+                      <h4>Our Company</h4>
+                      <hr>
+                      <h5>About Us</h5>
+                      <h5>Locate Us</h5>
+                      <h5>Contact Us</h5>
+                      <h5>Privacy Policy</h5>
+                      <h5>Terms & Conditions</h5>
+                  </div>
+                  <div class="wrtin">
+                      <h4>Social Media</h4>
+                      <hr>
+                      <h5>Facebook</h5>
+                      <h5>LinkedIn</h5>
+                      <h5>Twitter</h5>
+                      <h5>Pinterest</h5>
+                      <h5>Instagram</h5>
+                  </div>
+                  <div class="wrtin">
+                      <h4>Popular Searches</h4>
+                      <hr>
+                      <h5>Flats for rent in Abuja</h5>
+                      <h5>Houses for rent in Abuja</h5>
+                      <h5>Rental Properties</h5>
+                      <h5>Houses for sale in Abuja</h5>
+                  </div>
+                  <div class="wrtin">
+                      <h4></h4>
+                      <hr>
+                      <h5>Sell Property</h5>
+                      <h5>Buy Property</h5>
+                      <h5>Rental Properties</h5>
+                      <h5>Popular Properties</h5>
+                      <h5>Popular Cities</h5>
+                  </div>
+                  <div class="wrtin">
+                      <h4>Real Estate</h4>
+                      <hr>
+                      <h5>Sell Property</h5>
+                      <h5>Buy Property</h5>
+                      <h5>Rental Properties</h5>
+                      <h5>Popular Properties</h5>
+                      <h5>Popular Cities</h5>
+      
+      
+                  </div>
+      
+      
+              </div>
+          </div>
+          <div class="blak-footer">
+                                
+          </div>
+
+
+
+        
+
+    </div>
+  </body>
+</html>
+
+<script>
+  const allHouseDiv = document.getElementById("all-house-div");
+
+
+  let houseList = [
+    {
+      title: "1,756.74 SQM land in Jahi",
+      localty: "10 Units of 350sqmResidential Land in Jahi",
+      location: "Gilmore, Jahi, Jahi, Abuja, Abuja FCT",
+      price: "NGN 250,000,000",
+      propId: "#P1940775436",
+      propType: "Land",
+      category:"For Sale",
+      dateAdded:" 28th September 2022",
+      gpslocation: "9.0509837,7.4435875",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house1.jpg",
+      
+    },
+    {
+      title: "10 Units of 350sqmResidential Land in Wuye",
+      localty: "10 Units of 350sqmResidential Land in Jahi",
+      location: "Behind Wuye Market, Abuja, Abuja FCT",
+      price: "25, 000, 000",
+      propId: "#P3253416154",
+      propType: "Land",
+      category:"For Sale",
+      dateAdded:" 12th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house2.jpeg",
+
+    },
+    {
+      title: "3 Bedroom Flat For Sale In Mbora",
+      localty: "3 Bedroom Flat For Sale In Mbora",
+      location: "Citec, Abuja, Abuja FCT",
+      price: "38, 000, 000",
+      propId: " # P5939425420",
+      propType: "Block of Flats / Appartments",
+      category:"For Sale",
+      dateAdded:" 18th May 2022",
+      gpslocation: "9.0444948,7.4070443",
+      shortdesc: "3 Bedroom block of flat available in Mbora Abuja. Its is located in a serene Culdesac, newly built with modern features. It has only 6 families with a spacious compound. FEATURES: Ample Parking Lush green paly area for kids Off the major highway Within a gated community Armed Security 24/7 electricity Kindly call for a preview...Price is slightly negotiable",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house3.png",
+
+    },
+    {
+      title: "Beautiful 715sqm Dape Land",
+      localty: "Dape District, Abuja, Abuja FCT",
+      location: "Dape District, Abuja, Abuja FCT",
+      price: "25, 000, 000",
+      propId: " # P8872385417",
+      propType: "Land",
+      category:"For Sale",
+      dateAdded:" 17th May 2022",
+      gpslocation: "9.0888543,7.4257526",
+      shortdesc: "Beautiful well-positioned land located Dape District Location: Dape District Title Document: FCDA R of O, C of O Price:14M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house4.jpg",
+
+    },
+    {
+      title: "4 Bedroom Semi Detached Duplex Available In Jabi",
+      localty: "4 Bedroom Semi Detached Duplex Available In Jabi",
+      location: "Jabi, Jabi, Abuja, Abuja FCT",
+      price: "130,000,000",
+      propId: "# P8633135416",
+      propType: "Duplex",
+      category:"For Sale",
+      dateAdded: "17th May 2022",
+      gpslocation: "9.0641062,7.4229395",
+      shortdesc: "A beautifully estate with modern design located in Jabi has a 4 bedroom terrace duplex is available for sale in Abuja. It is off the major high way in a very good and serene environment. It has only few units within the beautiful estate.",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house5.png",
+
+    },
+    {
+      title: "4 Bedroom Terrace Duplex In Life Camp",
+      localty: "Life Camp Berger, Life Camp, Abuja, Abuja FCT",
+      location: "Life Camp Berger, Life Camp, Abuja, Abuja FCT",
+      price: "125, 000, 000",
+      propId: "#P3253416154",
+      propType: "Terraces",
+      category:"For Sale",
+      dateAdded:" 17th May 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "A beautifully built modern design 4 bedroom terrace duplex is available in life camp Abuja. It is off the major high way in a serene lush environment. It has only 8 units within the beautiful estate. FEATURES: Ample parking space Modern design POP finish all through All rooms ensuite Spacious roos Fully fitted Kitchen. This is a beautiful apartment to live in, if you want to live close to city centre in Abuja. Kindly Call for a preview.",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house6.png",
+
+    },
+    {
+      title: "Luxurious 5-Bedroom Duplex",
+      localty: " Sunny Vale Estate, Lokogoma, Abuja, Abuja FCT",
+      location: " Sunny Vale Estate, Lokogoma, Abuja, Abuja FCT",
+      price: "250, 000, 000",
+      propId: "#P3253416154",
+      propType: "Duplex",
+      category:"For Sale",
+      dateAdded:"30th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "For sale- 5 bedroom duplex in Sunnyvale Estate, Lokogoma. The property at Sunnyvale Estate is a 5 bedroom duplex (4 bedroom ensuite and an extra room not ensuite) with a 2 bedroom chalet with a toilet and a bathroom with wall 2 wall tiles. It is situated on a 1000+ sqm. plot (corner piece) The plot is spacious and paved (Can park over 8 vehicles) surrounded by golden palms, carpet grass and flowers for beautification. It is also equipped with CCTV coverage, an orchard, half completed swimming pool + changing room space, gazebo and generator space, borehole, overhead tank with sub-surface pump and pressure booster. ",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house8.jpeg",
+
+    },
+    {
+      title: "Tastefully Finished 4-Bedroom Terrace",
+      localty: "Wuye, Wuye, Abuja, Abuja FCT",
+      location: "Behind Wuye Market, Abuja, Abuja FCT",
+      price: "75, 000, 000",
+      propId: "# P6763345357",
+      propType: "Terraces",
+      category:"For Sale",
+      dateAdded:" 30th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "RESIDENCIA MODERNO LOCATION : Wuye, Abuja SPECIFICATIONS : - 4 Bedroom Terrace Duplex(BQ Inclusive) with 2 sitting rooms and a masters suite on the pent floor. FACILITIES: Sufficient Parking space Swimming pool Mini gym Cctv camera (for proper security) Back yard exclusive to each unit PRICES 4 Bedroom Terrace Duplex (BQ Inclusive) :75 Million C of O",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house9.jpeg",
+
+    },
+    {
+      title: "4 Bedroom Terrace Duplex with Bq",
+      localty: "Emadeb petrol station, Mabushi, Abuja, Abuja FCT",
+      location: "Emadeb petrol station, Mabushi, Abuja, Abuja FCT",
+      price: "110, 000, 000",
+      propId: "#P3253416154",
+      propType: "Terraces",
+      category:"For Sale",
+      dateAdded:" 28th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "A 4 bedroom Terrace duplex with a 1 room BQ available in Mabushi in Abuja. Landmark: Emadeb Petrol station. It is located inside an estate, its a smart house with solar panel inverter. Features: All room ensuite fully finished POP ceiling fitted kitchen Security Good Ambience Ample parking space",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house10.jpg",
+
+    },
+    {
+      title: "Luxury 3 Bedroom Bungalow with Studio Apartment BQ",
+      localty: "Gwarinpa Axis, Karsana, Abuja, Abuja FCT",
+      location: "Gwarinpa Axis, Karsana, Abuja, Abuja FCT",
+      price: "150, 000, 000",
+      propId: "#P3253416154",
+      propType: "Bungallow",
+      category:"For Sale",
+      dateAdded:" 201th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house11.png",
+
+    },
+    {
+      title: "Luxury 3 Bedroom Bungalow with 1 Bedroom Detached Bq",
+      localty: "Gwarinpa Axis, Karsana, Abuja, Abuja FCT",
+      location: "Gwarinpa Axis, Karsana, Abuja, Abuja FCT",
+      price: "70, 000, 000",
+      propId: "#P3253416154",
+      propType: "Bungallow",
+      category:"For Sale",
+      dateAdded:" 21th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house12.jpg",
+
+    },
+    {
+      title: "4 Bedroom Fully Detached Duplex with BQ",
+      localty: " Emadeb Petrol station, Mabushi, Abuja, Abuja FCT",
+      location: " Emadeb Petrol station, Mabushi, Abuja, Abuja FCT",
+      price: "150, 000, 000",
+      propId: "#P3253416154",
+      propType: "Duplex",
+      category:"For Sale",
+      dateAdded:" 28th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house13.jpg",
+
+    },
+    {
+      title: "10 Units of 350sqmResidential Land in Wuye",
+      localty: "10 Units of 350sqmResidential Land in Jahi",
+      location: "Behind Wuye Market, Abuja, Abuja FCT",
+      price: "25, 000, 000",
+      propId: "#P3253416154",
+      propType: "Land",
+      category:"For Sale",
+      dateAdded:" 12th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house14.jpeg",
+
+    },
+    {
+      title: "10 Units of 350sqmResidential Land in Wuye",
+      localty: "10 Units of 350sqmResidential Land in Jahi",
+      location: "Behind Wuye Market, Abuja, Abuja FCT",
+      price: "25, 000, 000",
+      propId: "#P3253416154",
+      propType: "Land",
+      category:"For Sale",
+      dateAdded:" 12th April 2022",
+      gpslocation: "9.1502837,7.0425895",
+      shortdesc: "This is a 350sqm Residential Plot in jahi Located on a developed part of Jahi, on a tarred road Prototype: 3 bedroom Terraced Duplex Title: Estate Allocation Price: 250M",
+      status: "Active",
+      pricelogo: "₦",
+      like: 0,
+      houseImg: "../house15.jpg",
+
+    },
+    // OTHER HOUSES WILL BE ADDED HERE
+  ];
+  // store the initial state of the houseList in local storage
+  localStorage.setItem("house-list", JSON.stringify(houseList));
+
+    const likeButtonClicked = (index) => {
+
+    console.log("like button index clicked is " + index);
+
+    // get the current likes count based on the current index
+    // always use `let` if you want to reassign a variable
+    let likesCount = houseList[index].like;
+
+    // get the index of the button on the page
+    // first get the parent div...then get the button
+    // const divIndex = allHouseDiv.querySelectorAll("div")[index];
+    // const buttonChild = divIndex.querySelector("button");
+
+    const houseDivChildren = allHouseDiv.querySelectorAll(".each-house");
+    const currentDiv = houseDivChildren[index]
+    const buttonChild = currentDiv.querySelector("button");
+
+    console.log("This is the div at index " + index);
+    console.log(currentDiv);
+    console.log("This is the button of the div at index " + index);
+    console.log(buttonChild);
+  
+    // if likesCount is greater than 0...then it means user has liked the post before
+    if (likesCount > 0) {
+      // reduce the like count if its greater then zero
+      likesCount--;
+    
+      // change the text of the button to like
+      buttonChild.innerHTML = "Like";
+    } else {
+      // if likesCount is less than or equals 0...then it means user is just liking the post
+      // increase the likes count if its less than zero
+      likesCount++;
+
+      // change the text of the button to unlike
+      buttonChild.innerHTML = "Unlike";
+    }
+    //update the likes count in the main list
+    houseList[index].like = likesCount;
+     console.log("house list below", houseList);
+    // store the updated state of the houseList in local storage
+    localStorage.setItem("house-list", JSON.stringify(houseList));
+
+    // rerender the houselist in the html again
+  };
+
+
+
+
+  const navigate = (index) => {
+    console.log("index is " + index);
+    const houseData = houseList[index];
+    localStorage.setItem("house-desc", JSON.stringify(houseData));
+    // this is how you navigate to another page programatically in javascript
+    window.open("HOUSE-description.html");
+  };
+
+
+
+  const initialize = () => {
+    houseList.map((item, index) => {
+      // create HTML ELEMENT FOR EACH HOUSE
+      const houseDiv = document.createElement("div");
+      houseDiv.innerHTML = 
+      `<div class = "each-house">
+              <div class = "house-img">
+                  <div class="house-img">
+                    <img src = ${item.houseImg}>
+                  </div>
+                  <div class="under-div">
+                    <button class="lyk" onclick="likeButtonClicked('${index}')"> ${item.like > 0 ? "Unlike" : "Like"} </button>
+                  </div>
+              </div>
+
+              <div class="info-div">
+                <h3 class="title"> ${ item.title}</h3>  
+                <p class ="hus-pri">House Price:  ${item.price}</p>
+                <h4>${item.location}</h4>
+                <h5>Property ID: ${item.propId}</h5>
+                <h5> Property Type: ${item.propType}</h5>
+                <h5> Property Description: ${item.localty}</h5>
+                <button class="desc" onclick="navigate(${index})">Go to Description</button>
+              </div>
+
+        </div>
+        
+      `;
+      allHouseDiv.appendChild(houseDiv);
+    });
+  };
+
+  initialize();
+</script>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Real estat login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/42f47e44b7.js" crossorigin="anonymous" x></script>
+
+    <title>LOGIN FORM</title>
+</head>
+<body>
+    <main>
+      <div class="bod">
+        <br><br><br><br>
+        <h1>  LOGIN FORM</h1>
+        
+        <form class="frm">
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-white-900 white:text-white">Your email</label>
+            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required>
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block mb-2 text-sm font-medium text-white-900 white:text-white">Your password</label>
+            <div class="pass-dis">
+              <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+              <div id="toggle-button">
+                <i class="fa-solid fa-eye-slash"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
+             
+            </div>
+            <label for="remember" class="ml-2 text-sm font-medium text-white-900 dark:text-white-300">Remember me</label>
+          </div>
+          <button onclick="login(event)" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+      </form>
+
+      </div>
+        
+    </main>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<script>
+
+      
+
+
+
+
+    let signedupUser = JSON.parse(localStorage.getItem("loggedUser"))
+    console.log(signedupUser);
+
+    function login(){
+      event.preventDefault();
+      if (email.value !=  signedupUser.email || password.value != signedupUser.password){
+        alert("User information not found")
+      }else{
+        alert("Login Successful")
+        localStorage.setItem("currentUser", JSON.stringify(signedupUser))
+        window.location.href = "index.html";
+      }
+
+    }
+
+
+
+      const passwordField = document.getElementById('password');
+      const toggleButton = document.getElementById('toggle-button');
+
+
+    toggleButton.addEventListener('click', function() {
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      toggleButton.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    } else {
+        passwordField.type = 'password';
+        toggleButton.innerHTML = ' <i class="fa-solid fa-eye-slash"></i>';
+    }
+
+
+    });
+
+
+
+
+</script>
